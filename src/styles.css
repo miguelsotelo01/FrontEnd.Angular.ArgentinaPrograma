@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.informacion {
+    border: 1px solid grey;
+    border-radius: 15px;
+    margin: 5px;
+    box-shadow: 2px 4px 15px 0 white;}

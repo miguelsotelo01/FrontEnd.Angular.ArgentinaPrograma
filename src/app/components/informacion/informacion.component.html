@@ -1,0 +1,54 @@
+<div class="row">
+<div class="contanier"*ngFor="let persona of personas" id="main-container"> 
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="informacion">
+    <img [src]="persona.backImg" class="img-fluid banner" alt="banner" width="100%" height="auto">
+    <img [src]="persona.profileImg" alt="perfil" class="perfil">
+
+    <div class="info">
+        <span><h1 class="text-start">{{persona.nombre}}</h1></span><br>
+        <span><h4>{{persona.ocupacion}}</h4></span><br>
+        <span><h4>{{persona.lugar}}</h4></span><br>
+        <span><h4>{{persona.telefono}}</h4></span><br>
+        <span><h4>{{persona.email}}</h4></span><br>
+    </div>
+    <!-- Button trigger modal -->
+<button type="button" (click)="onOpenModal(persona, 'edit')" class="btn btn-primary boton" data-bs-toggle="modal" data-bs-target="#updatePersonaModal">
+   Editar
+ </button>
+ <!-- Modal -->
+ <div class="modal fade" id="updatePersonaModal" tabindex="-1" aria-labelledby="updatePersonaModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         <form #editForm="ngForm">
+            <div class="form-group">
+               <label for="name">Nombre</label>
+               <input type="text" ngModel="{{editPersona?.nombre}}" name="nombre" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Nombre">
+            <input type="hidden" ngModel="{{editPersona?.id}}" name="id" class="form-control" id="id" placeholder="Email">
+               <label for="email">Direccion de Email</label>
+               <input type="email" ngModel="{{editPersona?.email}}" name="email" class="form-control" id="email" placeholder="Email">
+               <label for="phone">Ocupacion</label>
+               <input type="text" ngModel="{{editPersona?.ocupacion}}" name="ocupacion" class="form-control" id="ocupacion" placeholder="ocupacion">
+               <label for="phone">Telofono</label>
+               <input type="text" ngModel="{{editPersona?.telefono}}" name="telefono" class="form-control" id="telefono" name="telefono" placeholder="telefono">
+               <label for="backImg">Url Banner</label>
+               <input type="text" ngModel="{{editPersona.backImg}}"name="backImg" class="form-control" id="backImg" placeholder="imagen del banner">
+               <label for="profileImg">Url Perfil</label>
+               <input type="text" ngModel="{{editPersona.profileImg}}"name="profileImg" class="form-control" id="profileImg" placeholder="Imagen De Perfil">
+            </div> 
+         </form>
+       </div>
+       <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button (click)="onUpdatePersona(editForm.value)" type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar Cambios</button>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
