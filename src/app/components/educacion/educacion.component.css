@@ -1,0 +1,16 @@
+.educacion{
+    border: 1px solid grey;
+    border-radius: 15px;
+    margin: 5px;
+    box-shadow: 2px 4px 15px 0 white;
+    background-color: lightblue;
+}
+.row{
+    padding: 20px;
+}
+div{
+    background-color: lightblue;
+}
+h1, h3{
+    display:inline;
+}

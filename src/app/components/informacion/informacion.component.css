@@ -1,16 +1,10 @@
-.informacion{
-    background-color: lightblue;
-}
-.banner{
-    box-shadow: 3px 3px 3px black;
-}
 .perfil{
         border-radius: 50%;
         position: relative;
         width: 15%;
         height: 15%;
-        bottom: 50px;
-        box-shadow: 3px 3px 3px 3px black;
+        bottom: 100px;
+        box-shadow: 2px 2px 2px 2px black;
         align-content: center;
     }
     h1{
@@ -23,7 +17,8 @@
     }
     .boton{
         position: relative;
-        margin-top: -60px;
-        margin-left: 1220px;
-        margin-top: -600px;
     }
+    .banner{
+        border-radius: 15px;
+    }
+    
