@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona } from './services/persona';
+import { Persona } from './model/persona';
 import { PersonaService } from './services/persona.service';
 import{ HttpClient,   HttpErrorResponse} from '@angular/common/http';
 

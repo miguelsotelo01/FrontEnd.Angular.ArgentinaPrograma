@@ -14,6 +14,12 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { HardSoftComponent } from './components/hard-soft/hard-soft.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { LoginComponent } from './auth/login/login.component';
+import { RegistroComponent } from './auth/registro/registro.component';
+import { MenuComponent } from './menu/menu.component';
+import { IndexComponent } from './index/index.component';
+import { ContenedorComponent } from './components/contenedor/contenedor.component';
+import { PersonaInterceptorService } from './interceptors/persona-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,12 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     FooterComponent,
     ProyectosComponent,
     HardSoftComponent,
-    EducacionComponent
+    EducacionComponent,
+    LoginComponent,
+    RegistroComponent,
+    MenuComponent,
+    IndexComponent,
+    ContenedorComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +44,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     FormsModule,
     NgCircleProgressModule.forRoot({})
   ],
-  providers: [PersonaService],
+  providers: [PersonaInterceptorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
